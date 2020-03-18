@@ -4,6 +4,7 @@ describe("The payroll system", function () {
       expect(createEmployeeRecord).to.exist
     })
 
+
     describe("createEmployeeRecord", function () {
       it("populates a firstName field from the 0th element", function () {
         let testEmployee = createEmployeeRecord(["Gray", "Worm", "Security", 1])
@@ -314,7 +315,7 @@ describe("The payroll system", function () {
               timesOutRecordRow[1].forEach(function(timeOutStamp){
                 createTimeOutEvent(rec, timeOutStamp)
               })
-            }) 
+            })
             expect(calculatePayroll(employeeRecords)).to.eql(11880)
           })
         })
@@ -322,5 +323,3 @@ describe("The payroll system", function () {
     })
   })
 })
-
-
